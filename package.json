@@ -1,0 +1,19 @@
+{
+  "name": "object-fit-polyfill",
+  "version": "1.0.0",
+  "description": "Simple polyfill for object-fit by converting img to background-image",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/koga73/object-fit-polyfill.git"
+  },
+  "author": "AJ Savino",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/koga73/object-fit-polyfill/issues"
+  },
+  "homepage": "https://github.com/koga73/object-fit-polyfill#readme"
+}
