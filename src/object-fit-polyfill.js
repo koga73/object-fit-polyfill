@@ -1,5 +1,5 @@
 /*
-* object-fit-polyfill v1.1.1 Copyright (c) 2019 AJ Savino
+* object-fit-polyfill v1.1.2 Copyright (c) 2019 AJ Savino
 * https://github.com/koga73/object-fit-polyfill
 * MIT License
 */
@@ -38,8 +38,12 @@
 		}
 		return false;
 	}
-
-	document.addEventListener("DOMContentLoaded", function(){
-		win.objectFitPolyfill();
-	});
+	
+	if (typeof document !== typeof undefined){
+		document.addEventListener("DOMContentLoaded", function(){
+			win.objectFitPolyfill();
+		});
+	} else {
+		setTimeout(win.objectFitPolyfill, 1000); //Arbitrary number
+	}
 })(typeof window !== typeof undefined ? window : {});
