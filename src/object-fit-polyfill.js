@@ -1,5 +1,5 @@
 /*
-* object-fit-polyfill v1.1.0 Copyright (c) 2019 AJ Savino
+* object-fit-polyfill v1.1.1 Copyright (c) 2019 AJ Savino
 * https://github.com/koga73/object-fit-polyfill
 * MIT License
 */
