@@ -1,13 +1,13 @@
 /*
-* object-fit-polyfill v1.0.0 Copyright (c) 2018 AJ Savino
+* object-fit-polyfill v1.1.0 Copyright (c) 2019 AJ Savino
 * https://github.com/koga73/object-fit-polyfill
 * MIT License
 */
-(function(window){
+(function(win){
 	var _ATTRIB = "data-object-fit";
 	var _CLASS = "object-fit-polyfill";
 
-	window.objectFitPolyfill = function(){
+	win.objectFitPolyfill = function(){
 		if (_supportsObjectFit()){
 			return;
 		}
@@ -28,7 +28,10 @@
 
 	//Borrowed from https://github.com/constancecchen/object-fit-polyfill
 	function _supportsObjectFit(){
-		var edgeVersion = window.navigator.userAgent.match(/Edge\/(\d{2})\./);
+		var edgeVersion = null;
+		if (typeof window !== typeof undefined){
+			window.navigator.userAgent.match(/Edge\/(\d{2})\./);
+		}
 		var edgePartialSupport = (edgeVersion) ? (parseInt(edgeVersion[1], 10) >= 16) : false;
 		if ("objectFit" in document.documentElement.style !== false && !edgePartialSupport){
 			return true;
@@ -37,6 +40,6 @@
 	}
 
 	document.addEventListener("DOMContentLoaded", function(){
-		window.objectFitPolyfill();
+		win.objectFitPolyfill();
 	});
-})(window);
+})(typeof window !== typeof undefined ? window : {});

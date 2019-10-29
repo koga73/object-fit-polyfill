@@ -1,17 +1,24 @@
 # object-fit-polyfill
 Simple polyfill for object-fit by converting img to background-image
 
+## Install:
+``` bash
+npm i @koga73/object-fit-polyfill
+```
+
 Markup:
 ```html
-<div class="img-container">
+<picture>
+	<source srcset="http://via.placeholder.com/1920x1080" media="(orientation:landscape)"/>
+	<source srcset="http://via.placeholder.com/1080x1920" media="(orientation:portrait)"/>
 	<img src="http://via.placeholder.com/1920x1080" data-object-fit>
-</div>
+</picture>
 <script src="../src/object-fit-polyfill.js"></script>
 ```
 
 Styles:
 ```css
-.img-container {
+picture {
 	display:block;
 	width:100%;
 	height:100%;
@@ -19,7 +26,7 @@ Styles:
 	background-position:center center;
 }
 
-/* Image gets hidden */
+/* Image gets hidden when needed */
 img {
 	display:block;
 	width:100%;

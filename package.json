@@ -1,6 +1,6 @@
 {
-  "name": "object-fit-polyfill",
-  "version": "1.0.0",
+  "name": "@koga73/object-fit-polyfill",
+  "version": "1.1.0",
   "description": "Simple polyfill for object-fit by converting img to background-image",
   "main": "index.js",
   "scripts": {
